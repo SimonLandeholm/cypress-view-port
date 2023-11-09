@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple HTML Page</title>
+    <script>
+      // Check if the current resolution is above 1600x1000
+      function checkResolution() {
+        var screenWidth = screen.width;
+        var screenHeight = screen.height;
+
+        if (screenWidth > 1600 && screenHeight > 1000) {
+          // The resolution is above 1600x1000
+          document.body.innerHTML = "Your resolution is above 1600x1000 and ";
+        } else {
+          // The resolution is below 1600x1000
+          document.body.innerHTML = "Your resolution is below 1600x1000 and ";
+        }
+
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+
+        if (windowWidth > 1600 && windowHeight > 1000) {
+          // The window size is above 1600x1000
+          document.body.innerHTML = document.body.innerHTML + "your window is above 1600x1000!";
+        } else {
+          // The window size is below 1600x1000
+          document.body.innerHTML = document.body.innerHTML + "your window is below 1600x1000!";
+        }
+      }
+
+      // Execute the checkResolution function when the page loads
+      window.onload = checkResolution;
+
+      // Add an event listener to the window resize event
+      window.addEventListener("resize", checkResolution);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

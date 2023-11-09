@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "cypress": "^13.5.0",
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "start": "npx http-server ./",
+    "cy": "cypress open"
+  }
+}
